@@ -1,0 +1,49 @@
+// // Basics - using cout, endl or \n, printing integer 
+
+// #include <iostream>
+// using namespace std;
+// int main(){
+//     int x;
+//     x = 9;
+//     int y = 2;
+//     cout<<x<<endl<<y<<endl<<"The sum of x and y is : "<<x+y;
+// }
+
+// #include <iostream>
+// using namespace std;
+// int main(){
+//     int x = 10;
+//     int y = 20;
+//     cout<<"Sum of x and y is : "<<x+y<<endl;
+//     cout<<"Difference of x and y is : "<<x-y;
+// }
+
+// UPDATION OF VARIABLES
+
+// #include <iostream>
+// using namespace std;
+// int main(){
+//     int x = 10;
+//     cout<<"The value of x is : "<<x<<endl;
+//     // Saving value of x in another variable before updating
+//     int y;
+//     y = x;
+//     cout<<"The saved value of x in y is : "<<y<<endl;
+//     // Updating value
+//     x = 5;
+//     cout<<"The updated value of x is : "<<x<<endl;
+// }
+
+// Increment and decrement values
+
+#include <iostream>
+using namespace std;
+int main(){
+    int x= 5;
+    x = x + 100;
+    cout<<x<<endl;
+    x = x - 90;
+    cout<<x<<endl;
+    x = x / 3;
+    cout<<x<<endl;
+}
