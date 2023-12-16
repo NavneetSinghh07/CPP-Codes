@@ -1,0 +1,12 @@
+// Basics - using cout, endl or \n, printing integer 
+
+#include <iostream>
+using namespace std;
+int main(){
+    cout<<"Hello Everyone\n"<<"My name is Navneet"<<endl<<"I love in Unnao";
+    cout<<endl;
+    
+    cout<<4<<endl; //Considered as integer
+    cout<<4+3<<endl; //Considered as sum of integer
+    cout<<"4+3"; //Considered as text due to quotes.
+}
