@@ -1,0 +1,29 @@
+#include <iostream>
+#include <random>
+
+int main() {
+  // Generate a random number between 1 and 10
+  std::random_device rd;
+  std::mt19937 gen(rd());
+  std::uniform_int_distribution<int> dis(1, 10);
+  int secretNumber = dis(gen);
+
+  // Keep playing until the user guesses the right number
+  bool guessed = false;
+  int guess;
+  while (!guessed) {
+    std::cout << "Enter your guess (1-10): ";
+    std::cin >> guess;
+
+    if (guess == secretNumber) {
+      guessed = true;
+      std::cout << "Congratulations! You guessed the right number!" << std::endl;
+    } else if (guess < secretNumber) {
+      std::cout << "Your guess is too low. Try again!" << std::endl;
+    } else {
+      std::cout << "Your guess is too high. Try again!" << std::endl;
+    }
+  }
+
+  return 0;
+}
