@@ -1,0 +1,72 @@
+#include <iostream>
+#include <vector>
+#include <string>
+
+// Task structure to hold description and completion status
+struct Task {
+    std::string description;
+    bool completed;
+
+    Task(const std::string& desc) : description(desc), completed(false) {}
+};
+
+int main() {
+    std::vector<Task> tasks;
+    int choice;
+
+    do {
+        std::cout << "\nSimple To-Do List" << std::endl;
+        std::cout << "1. Add Task" << std::endl;
+        std::cout << "2. Mark Task as Complete" << std::endl;
+        std::cout << "3. Display Tasks" << std::endl;
+        std::cout << "4. Exit" << std::endl;
+        std::cout << "Enter your choice: ";
+        std::cin >> choice;
+
+        switch (choice) {
+            case 1: {
+                std::string taskDesc;
+                std::cout << "Enter task description: ";
+                std::cin.ignore();
+                std::getline(std::cin, taskDesc);
+                tasks.emplace_back(taskDesc);
+                std::cout << "Task added: " << taskDesc << std::endl;
+                break;
+            }
+
+            case 2: {
+                int taskIndex;
+                std::cout << "Enter task number to mark as complete: ";
+                std::cin >> taskIndex;
+                if (taskIndex > 0 && taskIndex <= tasks.size()) {
+                    tasks[taskIndex - 1].completed = true;
+                    std::cout << "Task marked as complete: " << tasks[taskIndex - 1].description << std::endl;
+                } else {
+                    std::cout << "Invalid task number!" << std::endl;
+                }
+                break;
+            }
+
+            case 3:
+                if (tasks.empty()) {
+                    std::cout << "No tasks in the list." << std::endl;
+                } else {
+                    std::cout << "Tasks:" << std::endl;
+                    for (size_t i = 0; i < tasks.size(); ++i) {
+                        std::cout << "[" << (tasks[i].completed ? "X" : " ") << "] "
+                                  << i + 1 << ". " << tasks[i].description << std::endl;
+                    }
+                }
+                break;
+
+            case 4:
+                std::cout << "Exiting..." << std::endl;
+                break;
+
+            default:
+                std::cout << "Invalid choice. Please enter a valid option." << std::endl;
+        }
+    } while (choice != 4);
+
+    return 0;
+}
