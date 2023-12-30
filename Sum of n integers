@@ -1,0 +1,26 @@
+#include <iostream>
+
+int sumOfNumbers(int n) {
+    int sum = 0;
+    
+    for (int i = 1; i <= n; ++i) {
+        sum += i;
+    }
+    
+    return sum;
+}
+
+int main() {
+    int num;
+    std::cout << "Enter a positive integer: ";
+    std::cin >> num;
+    
+    if (num <= 0) {
+        std::cout << "Please enter a positive integer." << std::endl;
+    } else {
+        int result = sumOfNumbers(num);
+        std::cout << "The sum of all positive integers from 1 to " << num << " is: " << result << std::endl;
+    }
+    
+    return 0;
+}
