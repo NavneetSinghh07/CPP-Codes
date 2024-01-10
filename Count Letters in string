@@ -1,1 +1,25 @@
-Here is the solution 
+//Here is the solution 
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    string str;
+    int letterCount = 0;
+
+    cout << "Enter a string: ";
+    getline(cin, str);  // Use getline to handle spaces in input
+
+    // Iterate through each character in the string
+    for (char c : str) {
+        if (isalpha(c)) {  // Check if the character is a letter
+            letterCount++;
+        }
+    }
+
+    cout << "Number of letters in the string: " << letterCount << endl;
+
+    return 0;
+}
