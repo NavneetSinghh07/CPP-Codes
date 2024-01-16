@@ -15,4 +15,5 @@ int main() {
     cout << "The sum of the first " << N << " natural numbers is: " << sum << endl;
 
     return 0;
+
 }
