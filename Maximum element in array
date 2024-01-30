@@ -15,6 +15,7 @@ int main() {
     int arr[] = { 12, 45, 78, 23, 56, 89 };
     int size = sizeof(arr) / sizeof(arr[0]);
 
+
     int maxElement = findMax(arr, size);
 
     cout << "The maximum element in the array is: " << maxElement << endl;
