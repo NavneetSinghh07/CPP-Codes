@@ -20,6 +20,7 @@ int main() {
     }
 
 
+
     cout << "Number of letters in the string: " << letterCount << endl;
 
     return 0;
