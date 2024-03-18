@@ -12,6 +12,7 @@ int findMax(int arr[], int size) {
     return max;
 }
 
+
 int main() {
     int arr[] = { 12, 45, 78, 23, 56, 89 };
     int size = sizeof(arr) / sizeof(arr[0]);
