@@ -18,6 +18,7 @@ int main() {
         if (isalpha(c)) {  // Check if the character is a letter
             letterCount++;
         }
+
     }
 
 
